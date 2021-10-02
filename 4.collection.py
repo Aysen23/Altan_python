@@ -3,6 +3,9 @@
 # Список (list)
 
 # создание пустого списка
+from typing import Set
+
+
 my_list = []
 my_list = list()
 
@@ -120,3 +123,13 @@ del my_dict["A"]
 # print(val)
 
 # Множество (set)
+
+set0 = {10, 20, 30} # дубликаты не допускаются
+set1 = set(("Hello, world!")) # конструктор set(())
+set2 = {True, False, True} # булевый тип данных
+set3 = {"hi!", 48, False} # может содержать разные типы данных
+print(set0)
+print(set1)
+print(set2)
+print(len(set0)) # получение длины набора
+print(type(set3)) #какой тип данных у набора?

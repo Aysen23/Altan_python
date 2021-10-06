@@ -104,6 +104,10 @@ my_list = [num  for num in range(10) if num % 2 == 0]
 # ключ значения
 
 # a = {word: len(word) for word in ['hello', 'hi', 'www']}
+
+# изменяемые списки ключами быть не могут
+# a = {word: len[word] for word in ['hello', 'hi', 'www']} 
+
 # print(a) 
 
 # data = {

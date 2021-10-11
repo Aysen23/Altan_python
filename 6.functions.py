@@ -106,16 +106,37 @@ my_lambda = lambda arg_1: arg_1 ** 3
 # print(my_lambda(10))
 
 # Пример 1. Словарь лямбда-выражений
-my_lambdas = {
-    "key_1": lambda a, b: (a + b)**2,
-    "key_2": lambda a, b, c: (a + b)**c
-}
+# my_lambdas = {
+#     "key_1": lambda a, b: (a + b)**2,
+#     "key_2": lambda a, b, c: (a + b)**c
+# }
 
-# print(my_lambdas["key_1"](2, 3))
+# # print(my_lambdas["key_1"](2, 3))
 
-# Пример 2. Передача объекта лямбды в функцию в качестве параметра
-def func_10(f, n):
-    res = f(n)
-    print(res)
+# # Пример 2. Передача объекта лямбды в функцию в качестве параметра
+# def func_10(f, n):
+#     res = f(n)
+#     print(res)
 
-func_10(lambda x: x * x, 10)
+# func_10(lambda x: x * x, 10)
+
+# Упорядочивание множества функций 
+# с помощью специальной функции "main"
+def main():
+    say_hello("Tom")
+    usd_rate = 56
+    money = 30000
+    result = exchange(usd_rate, money)
+    print("К выдаче", result, "долларов")
+ 
+ 
+def say_hello(name):
+    print("Hello,", name)
+     
+     
+def exchange(usd_rate, money):
+    result = round(money/usd_rate, 2)
+    return result
+ 
+# Вызов функции main
+main()

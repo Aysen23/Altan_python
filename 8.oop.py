@@ -67,12 +67,23 @@ class Animal:
 
 # создание дочерних классов
 class Human(Animal):
-    def __init__(self, num_legs, name):
+    def __init__(self, num_legs, name,):
         super().__init__(num_legs)
         self.name = name
 
     def speech(self):
-        print(f"My name is {self.name}. Legs: {self.legs}")
+        print(f"My name is {self.name}. Legs: {self.legs}.")
+
+class Children(Human):
+    def __init__(self, num_legs, name, age):
+        super().__init__(num_legs, name)
+        self.age = age
+
+    def speech(self):
+        print(f"My name is {self.name}. Legs: {self.legs}. Age: {self.age}.")
+
+    def hi(self):
+        print("Hi!")
 
 class Cat_2(Animal):
     def __init__(self, legs, name, color):
@@ -91,6 +102,8 @@ bug = Animal(6)
 
 man_1 = Human(2, "Petya")
 woman_1 = Human(2, "Katya")
+girl = Children(2, "Dasha", 6)
+boy = Children(4, "Sasha", 2)
 
 cat_1 = Cat_2(4, "Pushok", "green")
 
@@ -101,6 +114,17 @@ print(bug.legs)
 man_1.move()
 man_1.speech()
 
-cat_1.move()
+woman_1.move()
+woman_1.speech()
+
+girl.hi()
+girl.speech()
+girl.move()
+
+boy.hi()
+boy.speech()
+boy.move()
+
 cat_1.speech()
+cat_1.move()
 cat_1.mur()

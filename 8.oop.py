@@ -67,7 +67,7 @@ class Animal:
 
 # создание дочерних классов
 class Human(Animal):
-    def __init__(self, num_legs, name,):
+    def __init__(self, num_legs, name):
         super().__init__(num_legs)
         self.name = name
 

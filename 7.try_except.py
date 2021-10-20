@@ -78,6 +78,10 @@ def calculate(n1, n2, op):
         '-': lambda x, y: x - y,
         '*': lambda x, y: x * y,
         '/': lambda x, y: x / y,
+        '%': lambda x, y: x % y,
+        '//': lambda x, y: x // y,
+        '**': lambda x, y: x ** y,
+        
     }
     return d[op](n1, n2)
 
@@ -90,8 +94,8 @@ while True:
 
     try:
         num_1 = int(input("Введите первое число: "))
-        num_2 = int(input("Введите второе число: "))  
         op = input("Введите символ операции: ")
+        num_2 = int(input("Введите второе число: "))  
 
         # обработка данных
         result = calculate(num_1, num_2, op)

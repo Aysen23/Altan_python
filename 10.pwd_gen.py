@@ -15,7 +15,7 @@ def generator():
     hash_str = hashlib.sha256(byte_str)
     # преобразование хеш-строки в обычную строку
     hex_str = hash_str.hexdigest()
-    s = list(hex_str)
+    s = hex_str
     start = s[:10]  
 
     # вывод хеш-строки

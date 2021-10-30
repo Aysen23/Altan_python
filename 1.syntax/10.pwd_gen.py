@@ -14,13 +14,13 @@ def generator():
     # хеширование
     hash_str = hashlib.sha256(byte_str)
     # преобразование хеш-строки в обычную строку
-    hex_str = hash_str.hexdigest()
-    s = hex_str
-    start = s[:10]  
+    hex_str = hash_str.hexdigest() # [:10] короткий способ сократить строку вывода
+    s = hex_str[:10] # более короткий способ сократить строку вывода
+    # start = s[:10]  более длинный способ сократить строку вывода
 
     # вывод хеш-строки
     # print(hex_str)
-    hash_pwd.set(start)
+    hash_pwd.set(s)
 # generator("qwerty")
 
 # объект окна
